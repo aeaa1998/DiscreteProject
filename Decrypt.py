@@ -7,8 +7,8 @@ class Decrypt:
         self.n = self.utils.intInputMin("Ingrese un mod n", 1)
 
     def decryptMessage(self, text: str):
-        cryptedMessages = ''.join(chr(pow(ord(char), self.privateKey, self.n)) for char in text)
-
+        dec = ''.join(chr(pow(ord(char), self.privatekey, self.n)) for char in text)
+        print("El mensaje normal es: \n" + dec)
 
     def setPrivateKey(self):
         self.privatekey = self.utils.intInputMin("Ingrese un private key", 1)

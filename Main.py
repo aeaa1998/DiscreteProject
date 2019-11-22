@@ -4,7 +4,7 @@ from Utils import Utils
 utils = Utils()
 running = True
 mainMenu = ["Encryptar", "Decryptar", "Salir"]
-cryptMenu = ["Encryptar mensaje", "Mostrar public key", "Mostrar private key", "Salir"]
+cryptMenu = ["Encryptar mensaje", "Mostrar public key", "Mostrar private key", "Mostrar mod n", "Salir"]
 decryptMenu = ["Dencryptar mensaje", "Setear nuevo mod n", "Setear nuevo private key", "Salir"]
 
 while running:
@@ -20,6 +20,8 @@ while running:
                 crypt.showPublicKey()
             elif cryptKey == 3:
                 crypt.showPrivateKey()
+            elif cryptKey == 4:
+                crypt.showModN()
             else:
                 print("Ha salido del menu")
                 cm = False

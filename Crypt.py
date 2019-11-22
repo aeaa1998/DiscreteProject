@@ -8,10 +8,8 @@ class Crypt:
         pN = 0
         invalid = True
         while invalid:
-            primeQ = 11
-                # utils.primeInput("Ingrese el valor del numero primo q", 11, 1000)
-            primeP = 13
-                # utils.primeInput("Ingrese el valor del numero primo p", 13,1000)
+            primeQ = utils.primeInput("Ingrese el valor del numero primo q", 11, 1000)
+            primeP = utils.primeInput("Ingrese el valor del numero primo p", 13,1000)
             # MOD N
             self.n = primeP * primeQ
             # MOD N2
@@ -35,10 +33,13 @@ class Crypt:
 
         cryptedMessages = ''.join(chr(pow(ord(char), self.privateKey, self.n)) for char in cryptedMessage)
         print("El mensaje encriptado es: \n" + cryptedMessage)
-        print("El mensaje normal es: \n" + cryptedMessages)
+
 
     def showPublicKey(self):
         print("Public Key:\n" + str(self.publicKey))
+
+    def showModN(self):
+        print("Mod n:\n" + str(self.n))
 
 
     def showPrivateKey(self):
